@@ -14,9 +14,10 @@ class Shape(ABC):
         """Calcule et retourne le périmètre de la forme"""
         pass
 
-# Classe concrète Circle
 class Circle(Shape):
     def __init__(self, radius):
+        if radius < 0:
+            raise ValueError("Radius cannot be negative")
         self.radius = radius
 
     def area(self):
@@ -24,6 +25,7 @@ class Circle(Shape):
 
     def perimeter(self):
         return 2 * math.pi * self.radius
+
 
 # Classe concrète Rectangle
 class Rectangle(Shape):
