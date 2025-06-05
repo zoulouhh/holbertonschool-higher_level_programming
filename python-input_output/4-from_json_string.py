@@ -5,7 +5,7 @@ into a native Python data structure.
 """
 import json
 
-
+:
 def from_json_string(my_str):
     """
     Converts a JSON-formatted string into a corresponding Python object.
