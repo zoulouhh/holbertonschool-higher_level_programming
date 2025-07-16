@@ -1,12 +1,12 @@
-const arg = process.argv[2];
-const num = parseInt(arg, 10);
+#!/usr/bin/node
 
-if (!arg || isNaN(num) || num <= 0) {
+// Convert the first command line argument to an integer
+const X = parseInt(process.argv[2]);
+// Check if the conversion resulted in a valid number
+if (isNaN(X)) {
   console.log('Missing number of occurrences');
 } else {
-  let i = 0;
-  while (i < num) {
+  for (let i = 0; i < X; i++) {
     console.log('C is fun');
-    i++;
   }
 }
