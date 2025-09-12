@@ -1,0 +1,31 @@
+>>> from 3-say_my_name import say_my_name
+
+# Test avec prénom et nom
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+# Test avec autres prénoms et noms
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+# Test avec uniquement le prénom
+>>> say_my_name("Bob")
+My name is Bob
+
+# Test avec prénom non string (doit lever TypeError)
+>>> try:
+...     say_my_name(12, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+# Test avec nom non string (doit lever TypeError)
+>>> try:
+...     say_my_name("Alice", 123)
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+# Test avec prénom et nom vides (chaînes vides)
+>>> say_my_name("", "")
+My name is
