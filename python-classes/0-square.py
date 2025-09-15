@@ -1,17 +1,9 @@
 #!/usr/bin/python3
+"""
+0-square.py
+Defines an empty class Square.
+"""
+
 class Square:
-    """
-    This class defines a square.
-
-    Attributes:
-        size (int): The size of the square's sides.
-    """
-
-    def __init__(self, size):
-        """
-        Initializes a new Square instance.
-
-        Args:
-            size (int): The size of the square's sides.
-        """
-        self.__size = size
+    """Represents an empty square."""
+    pass
