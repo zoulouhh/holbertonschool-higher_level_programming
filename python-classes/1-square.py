@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+# Définition de la classe Square (Carré)
 class Square:
      # Méthode spéciale appelée lors de la création d'une instance de Square
     def __init__(self, size):
