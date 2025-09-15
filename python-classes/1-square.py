@@ -1,9 +1,20 @@
 #!/usr/bin/python3
-# Définition de la classe Square (Carré)
-class Square:
-     # Méthode spéciale appelée lors de la création d'une instance de Square
-    def __init__(self, size):
-        # Attribut d'instance privé qui stocke la taille du carré
-        # Le double underscore rend l'attribut privé (non accessible directement)
-        self.__size = size
+"""1-square.py"""
 
+
+class Square:
+    """
+    A class that defines a square.
+
+    Attributes:
+        __size (int): The size of the square's side.
+    """
+
+    def __init__(self, size):
+        """
+        Initializes the Square instance with a given size.
+
+        Args:
+            size (int): The size of the square's side.
+        """
+        self.__size = size
