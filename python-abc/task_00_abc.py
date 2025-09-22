@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """
-This module defines an abstract class `Animal` and its subclasses.
-
-The `Animal` class uses the abc module to define an abstract method `sound`
-that must be implemented by all subclasses.
+This module defines an abstract base class Animal,
+and two concrete subclasses: Dog and Cat.
 """
 
 from abc import ABC, abstractmethod
-
 
 class Animal(ABC):
     """
@@ -19,8 +16,8 @@ class Animal(ABC):
     @abstractmethod
     def sound(self):
         """
-        Abstract method that must be implemented by all animal subclasses.
-        Should return the sound made by the animal.
+        Abstract method to return the sound an animal makes.
+        Must be implemented by subclasses.
         """
         pass
 
