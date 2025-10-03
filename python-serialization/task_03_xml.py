@@ -28,3 +28,17 @@ def serialize_to_xml(dictionary, filename):
         return True
     except Exception:
         return False
+
+    def deserialize_from_xml(filename):
+    """
+    Deserialize an XML file into a Python dictionary.
+
+    Args:
+        filename (str): Path to the XML file.
+
+    Returns:
+        dict: Dictionary representation of the XML data.
+    """
+    try:
+        tree = ET.parse(filename)
+        root = tree.getroot()
