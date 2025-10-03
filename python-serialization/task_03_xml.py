@@ -29,7 +29,8 @@ def serialize_to_xml(dictionary, filename):
     except Exception:
         return False
 
-    def deserialize_from_xml(filename):
+
+def deserialize_from_xml(filename):
     """
     Deserialize an XML file into a Python dictionary.
 
@@ -42,3 +43,5 @@ def serialize_to_xml(dictionary, filename):
     try:
         tree = ET.parse(filename)
         root = tree.getroot()
+
+        
