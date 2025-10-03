@@ -44,4 +44,10 @@ def deserialize_from_xml(filename):
         tree = ET.parse(filename)
         root = tree.getroot()
 
-        
+        data = {}
+        for child in root:
+            data[child.tag] = child.text
+
+        return data
+    except Exception:
+        return None
