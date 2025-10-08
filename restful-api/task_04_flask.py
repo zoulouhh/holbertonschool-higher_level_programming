@@ -8,7 +8,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# In-memory "database"
+
 users = {}
 
 
@@ -54,12 +54,12 @@ def add_user():
     """
     data = request.get_json()
 
-    # Validate incoming JSON
+    
     if not data or "username" not in data:
         return jsonify({"error": "Username is required"}), 400
 
     username = data["username"]
-    users[username] = data  # Store the entire user data
+    users[username] = data  
 
     return jsonify({
         "message": "User added",
@@ -68,5 +68,5 @@ def add_user():
 
 
 if __name__ == "__main__":
-    # Run Flask development server
+    
     app.run(host="0.0.0.0", port=5000)
