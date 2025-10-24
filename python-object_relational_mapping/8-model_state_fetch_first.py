@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all State objects from the database hbtn_0e_6_usa.
+Prints the first State object from the database hbtn_0e_6_usa.
 """
 
 import sys
@@ -11,8 +11,9 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     """
-    Connects to the database, retrieves and displays all State objects,
+    Connects to the database, retrieves and displays the first State object,
     sorted by states.id in ascending order.
+    If the table is empty, prints "Nothing".
     """
     # Create the engine to connect to the MySQL server
     engine = create_engine(
@@ -29,12 +30,14 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query all State objects, sorted by id in ascending order
-    states = session.query(State).order_by(State.id).all()
+    # Query for the first State object
+    first_state = session.query(State).order_by(State.id).first()
 
-    # Print each state in the required format
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    # Print the result or "Nothing" if no state is found
+    if first_state:
+        print(f"{first_state.id}: {first_state.name}")
+    else:
+        print("Nothing")
 
     # Close the session
     session.close()
